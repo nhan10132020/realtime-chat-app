@@ -85,6 +85,9 @@ const ChatWindow = () => {
     }
 
     const handleOnSubmit=()=>{
+        if(inputValue==''){
+            return;
+        }
         addDocument('messages',{
             text:inputValue,
             uid,
