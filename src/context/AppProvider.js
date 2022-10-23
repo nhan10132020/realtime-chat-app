@@ -4,6 +4,9 @@ import { AuthContext } from './AuthProvider';
 export const AppContext = React.createContext()
 
 export default function AppProvider({children}){
+//The code bellow handle visible of sidebar;
+    const[isSidebarVisible,setIsSidebarVisible]= useState(true);
+
 //The code bellow handle visible ann unvisible cua modal
     const[visible,setVisible]=useState(false);
 
@@ -66,7 +69,7 @@ export default function AppProvider({children}){
 
 
     return(
-        <AppContext.Provider value={{rooms,members,visible,setVisible,selectedRoomId,setSelectedRoomId,selectedRoom,isInviteMemberVisible,setIsInviteMemberVisible}}>
+        <AppContext.Provider value={{rooms,members,visible,setVisible,selectedRoomId,setSelectedRoomId,selectedRoom,isInviteMemberVisible,setIsInviteMemberVisible,isSidebarVisible,setIsSidebarVisible}}>
             {children}
         </AppContext.Provider>
     )

@@ -46,10 +46,17 @@ const LinkStyled = styled(Typography.Link)`
 `;
 
 const RoomList = () => {
-    const {rooms,setVisible,setSelectedRoomId} = React.useContext(AppContext)
+    const {rooms,setVisible,setSelectedRoomId,setIsSidebarVisible} = React.useContext(AppContext)
     
     const handleAddRoom=()=>{
         setVisible(true);
+    }
+
+    function handleRoomClick(room){
+        setSelectedRoomId(room.id);
+        if(window.innerWidth<=500){
+        setIsSidebarVisible(false)
+        }
     }
 
   return (
@@ -57,7 +64,7 @@ const RoomList = () => {
         <PanelStyled  header="List of room" key={1}>
             {
                 rooms?.map(room=>{
-                    return <LinkStyled onClick={()=>{setSelectedRoomId(room.id)}} key={room.id} strong italic>{room.name}</LinkStyled>
+                    return <LinkStyled onClick={()=>{handleRoomClick(room)}} key={room.id} strong italic>{room.name}</LinkStyled>
                 })
             }
             <Button onClick={handleAddRoom} className='addroom' type='text' icon={<PlusSquareOutlined/>}>Add</Button>
