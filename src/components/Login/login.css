@@ -1,0 +1,47 @@
+span{
+    font-weight:500;
+}
+.box{
+    padding:1rem;
+    display: flex;
+    justify-content:center;
+    background-image: url('https://img.freepik.com/free-photo/pink-watercolor-texture_1083-158.jpg?w=2000');
+    height:100vh;
+}
+.content__login {
+    padding: 2rem 0.8rem;
+    background-color: rgba(250,250,250,1);
+    border-radius:2rem;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.content__name{
+    text-align:center;
+    font-weight:800;
+    font-size:2rem;
+    color: #000;
+    border-bottom: 1px solid #ccc;
+}
+
+.content__buttons{
+    display:flex;
+    justify-content:center;
+}
+
+.content__button{
+    padding:0.5rem 3rem;
+    border-radius: 2rem;
+    width:300px;
+}
+
+.content__button__facebook{
+    background-color: rgba(80,124,192,1);
+}
+
+.content__button__google{
+    background-color:#df492f;
+}
+
+
